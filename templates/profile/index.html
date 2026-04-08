@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Avenir Tech{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="{% static 'images/favicon.png' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}?v=1.1">
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+</head>
+
+<body>
+
+    {% include 'profile/partials/_header.html' %}
+
+    <main style="min-height: 80vh;">
+        {% block content %}
+
+        <!-- Le menu latéral rétractable -->
+        <aside class="sidebar-menu" id="sidebar">
+            <div class="sidebar-content">
+                <ul class="sidebar-links">
+                    <li>
+                        <a href="#competences">
+                            <i class="fas fa-code"></i>
+                            <span class="link-text">Mes Compétences</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#apropos">
+                            <i class="fas fa-user"></i>
+                            <span class="link-text">À propos de moi</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#services">
+                            <i class="fas fa-laptop-code"></i>
+                            <span class="link-text">Mes Services</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#realisation">
+                            <i class="fas fa-project-diagram"></i>
+                            <span class="link-text">Mes Réalisations</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#presentation">
+                            <i class="fas fa-user-tie"></i>
+                            <span class="link-text">Ma Présentation</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact">
+                            <i class="fas fa-envelope"></i>
+                            <span class="link-text">Contact Rapide</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="sidebar-footer">
+                    <a href="{% static 'pdf/Selon_CV.pdf' %}" class="cv-download-btn" download>
+                        <i class="fas fa-file-download"></i>
+                        <span class="link-text">Télécharger CV</span>
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+        <section id="accueil" class="hero-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-image">
+                        <img src="{% static 'images/profileHomme-rb2.png' %}" alt="Description de l'image"
+                            class="responsive-image">
+                    </div>
+
+                    <div class="col-text">
+                        <span class="sup-title">Bonjour, je m'appelle</span>
+                        <h1 class="main-title" id="typing-text">
+                            <span class="highlight-letter">R</span>ANDRIAVAO
+                            <span class="highlight-letter">S</span>elon
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Langage et Téchnologie -->
+        <section id="competences" class="language-skill">
+            <div class="container">
+                <h2 class="skill-title">
+                    Mes <span class="white-text">Compétences</span>
+                </h2>
+
+                <div class="skills-wrapper">
+                    <div class="skill-item">
+                        <img src="{% static 'images/python-rb.png' %}" alt="Python">
+                    </div>
+                    <div class="skill-item">
+                        <img src="{% static 'images/Django-rb.png' %}" alt="Django">
+                    </div>
+                    <div class="skill-item">
+                        <img src="{% static 'images/HTML5-rb.png' %}" alt="HTML5">
+                    </div>
+                    <div class="skill-item">
+                        <img src="{% static 'images/CSS3-rb.png' %}" alt="CSS3">
+                    </div>
+                    <div class="skill-item">
+                        <img src="{% static 'images/javascript-rb.png' %}" alt="Javascript">
+                    </div>
+
+
+                    <div class="skill-item btn-more" id="openModal">
+                        <span>+ Voir Tout</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LA MODALE -->
+
+        <div id="skillsModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <h2 class="modal-title">Stack Technique Complète</h2>
+
+                <div class="modal-grid">
+
+                    <!-- CATÉGORIE : IA -->
+                    <div class="category">
+                        <h3>IA</h3>
+                        <ul>
+                            <li><i class="fas fa-bolt"></i> GROQ (LPU Inference)</li>
+                            <li><i class="fas fa-microphone"></i> DeepGram (STT/TTS)</li>
+                            <li><i class="fas fa-gemini"></i> Google Gemini / Vertex AI</li>
+                            <li><i class="fas fa-brain"></i> OpenAI (GPT-4/DALL-E)</li>
+                        </ul>
+                    </div>
+
+                    <!-- Catégorie Backend -->
+                    <div class="category">
+                        <h3>Backend</h3>
+                        <ul>
+                            <li>Python / Django / REST API</li>
+                            <li>Java / SpringBoot / REST API</li>
+                            <li>VBA Excel</li>
+                            <li>PostgreSQL/MySQL/SQLite</li>
+                            <li>Docker</li>
+                        </ul>
+                    </div>
+
+                    <!-- Catégorie Frontend -->
+                    <div class="category">
+                        <h3>Frontend</h3>
+                        <ul>
+                            <li>HTML5 / CSS3</li>
+                            <li>JavaScript (ES6+)</li>
+                            <li>Bootstrap</li>
+                            <li>ReactJs</li>
+                        </ul>
+                    </div>
+
+                    <!-- Catégorie Outils -->
+                    <div class="category">
+                        <h3>Outils & Autres</h3>
+                        <ul>
+                            <li>Git / GitHub</li>
+                            <li>Linux</li>
+                            <li>Visual studio code</li>
+                            <li>IntelliJ IDEA Community</li>
+                            <li>POSTMAN</li>
+                            <li>DOCKER DESKTOP</li>
+                            <li>XAMPP</li>
+                            <li>EXCEL / WORD</li>
+                            <li>Odoo ERP / Odoo Site web</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section à propos de moi -->
+
+        <section id="apropos" class="about-me">
+            <div class="container">
+                <div class="row about-row">
+
+                    <div class="col-content">
+                        <h3 class="about-subtitle">Qui suis-je ?</h3>
+                        <p class="about-text">
+                            Développeur passionné par la résolution de problèmes complexes et l'innovation
+                            technologique.
+                            Mon parcours m'a permis d'acquérir une solide expertise en <strong>Python</strong> et
+                            <strong>Django</strong>, tout en explorant les frontières de l'<strong>Intelligence
+                                Artificielle</strong>
+                            avec des outils comme Groq et OpenAI.
+                        </p>
+                        <p class="about-text">
+                            Mon objectif est de concevoir des solutions performantes, scalables et centrées sur
+                            l'utilisateur,
+                            en alliant rigueur technique et créativité.
+                        </p>
+
+                        <div class="about-actions">
+                            <a href="{% static 'pdf/Selon_CV.pdf' %}" class="btn-cv" target="_blank">
+                                Consultez mon CV <i class="fas fa-file-download"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-visual align-bottom">
+                        <div class="image-frame">
+                            <img src="{% static 'images/about_me2.png' %}" alt="Mon espace de travail"
+                                class="about-photo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Service -->
+
+        <section id="services" class="services-section">
+            <div class="container">
+                <div class="row services-row">
+
+                    <div class="col-visual services-col-img">
+                        <div class="services-image-frame">
+                            <img src="{% static 'images/My_service2.png' %}" alt="Développement" class="services-photo">
+                        </div>
+                    </div>
+
+                    <div class="col-content services-col-text">
+                        <div class="text-wrapper">
+                            <h3 class="services-title"><span class="services-title-expertise">Expertise</span> Technique
+                            </h3>
+                            <p class="services-text">
+                                Je transforme vos idées en solutions numériques performantes grâce à l'écosystème <strong>Python/Django</strong>. Mon expertise va de la sécurisation d'applications web (authentification avancée) à la création d'agents IA autonomes. En exploitant la puissance de <strong>Groq</strong>, <strong>OpenAI</strong> et <strong>Google Gemini</strong>, ainsi que l'analyse audio de <strong>Deepgram</strong>, je développe des systèmes capables de gérer et d'automatiser vos tâches métier de manière intelligente.
+                            </p>
+
+                            <div class="services-actions">
+                                <a href="#contact" class="btn-services">
+                                    En savoir plus <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Réalisations -->
+
+        <section id="realisation" class="realisations-section">
+            <div class="container">
+                <h1 class="realisations-main-title">
+                    <span class="realisations-main-title-txt-color">Mes</span> Réalisations
+                </h1>
+
+                <div class="row realisations-row">
+                    <!-- Projet 1 -->
+                    <a href="https://drive.google.com/file/d/1cFgg3WXKSVUMgdaJFG5i0v-g24y6cZKK/view?usp=drive_link"
+                        class="project-card-link">
+                        <div class="project-card">
+                            <div class="card-image">
+                                <img src="{% static 'images/collab-distance.png' %}" alt="Projet 1">
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-subtitle">Application de collaboration à distance en temps réel</h3>
+                                <p class="card-description">C’est une application web créée pour faciliter la
+                                    communication entre des équipes ou des groupes travaillant à distance.</p>
+                                <div class="card-footer">
+                                    <span class="btn-project">Voir le projet <i
+                                            class="fas fa-external-link-alt"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Projet 2 -->
+                    <a href="https://drive.google.com/file/d/1cRUVbz20nJX-W4IxpnX8Wn_Txz8Vnny3/view?usp=drive_link"
+                        class="project-card-link">
+                        <div class="project-card">
+                            <div class="card-image">
+                                <img src="{% static 'images/app-surveillance.png' %}" alt="Projet 2">
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-subtitle">Outil de monitoring des équipes à distance</h3>
+                                <p class="card-description">Projet conçu pour analyser et suivre le sérieux et
+                                    l’implication des employés dans leurs activités professionnelles.</p>
+                                <div class="card-footer">
+                                    <span class="btn-project">Voir le projet <i
+                                            class="fas fa-external-link-alt"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Projet 3 -->
+                    <a href="https://drive.google.com/file/d/1FltaklXiS2KTPLce9wiptm7JiPQlZA_M/view?usp=drive_link"
+                        class="project-card-link">
+                        <div class="project-card">
+                            <div class="card-image">
+                                <img src="{% static 'images/location-voiture.png' %}" alt="Projet 3">
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-subtitle">Solution de réservation de voitures en ligne</h3>
+                                <p class="card-description">Application web permettant de centraliser et simplifier les
+                                    réservations de voitures en ligne, accessible aux loueurs et aux clients.</p>
+                                <div class="card-footer">
+                                    <span class="btn-project">Voir le projet <i
+                                            class="fas fa-external-link-alt"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ---------Section Presentation------ -->
+
+        <section id="presentation" class="presentation-section">
+            <div class="container">
+                <div class="row presentation-row">
+
+                    <div class="col-video">
+                        <div class="video-wrapper" style="position: relative;">
+                            <video id="myVideo" autoplay muted loop playsinline class="presentation-video">
+                                <source src="{% static 'videos/introduction.webm' %}" type="video/mp4">
+                            </video>
+
+                            <button onclick="toggleMute()" id="muteBtn" class="mute-control">
+                                <i class="fas fa-volume-mute"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="col-text-presentation">
+                        <span class="mini-subtitle">Innovation & Technologie</span>
+                        <h3 class="presentation-title">C’est en <span class="presentation-title-color">forgeant</span>
+                            qu’on <span class="presentation-title-color">devient</span> forgeron</h3><br>
+                        <p class="presentation-description">
+                            À travers mes projets, je m'efforce de repousser les limites du possible en intégrant
+                            des architectures backend robustes avec les dernières avancées en intelligence artificielle.
+                            Chaque ligne de code est pensée pour offrir une expérience utilisateur fluide et impactante.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- -------Section Contact---- -->
+
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="row contact-row shadow-box">
+
+                    <div class="col-contact-form">
+                        <form action="#" method="POST" class="contact-form" id="contact-form">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <input type="text" id="company_name" name="company_name" placeholder="Nom d'entreprise" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="subject" name="subject" placeholder="Sujet" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" placeholder="Votre Email" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="message" name="message" rows="5" placeholder="Votre Message" required></textarea>
+                            </div>
+                            <button type="submit" class="btn-submit" id="btn-submit">Envoyer le message</button>
+                            <div id="form-response"></div>
+                        </form>
+                    </div>
+
+                    <div class="col-contact-info highlighted-info">
+                        <h4 class="info-title">Parlons de votre projet</h4>
+                        <p class="info-text">
+                            Disponible pour de nouvelles opportunités de collaboration.
+                            N'hésitez pas à me contacter pour discuter de vos besoins techniques.
+                        </p>
+                        <ul class="info-details">
+                            <li><i class="fas fa-phone"></i> <span>Téléphone :</span> +261 32 14 146 19</li>
+                            <li><i class="fas fa-envelope"></i> <span>Email :</span> selonrandriavao@gmail.com</li>
+                            <li><i class="fas fa-map-marker-alt"></i> <span>Adresse :</span> Mahajanga, Madagascar
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Bouton Scroll Top -->
+        <button id="scrollTopBtn" class="scroll-top-btn">
+            <i class="fas fa-chevron-up"></i>
+        </button>
+
+        {% endblock %}
+    </main>
+
+    {% include 'profile/partials/_footer.html' %}
+
+    {% load static %}
+
+    <script src="{% static 'js/modal.js' %}"></script>
+    <script src="{% static 'js/header.js' %}"></script>
+    <script src="{% static 'js/videos.js' %}"></script>
+    <script src="{% static 'js/scrollTop.js' %}"></script>
+    <script src="{% static 'js/textTypingEffet.js' %}"></script>
+    <script src="{% static 'js/contact.js' %}"></script>
+</body>
+
+</html>
