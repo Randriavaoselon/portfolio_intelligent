@@ -1,0 +1,6 @@
+# Fichiers de configuration
+*.env
+.env
+*.sqlite3
+# Environnement virtuel
+env/
