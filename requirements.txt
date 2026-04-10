@@ -1,6 +1,9 @@
 Django==5.2.12
 djangorestframework==3.17.1
 django-cors-headers==4.9.0
+pysqlite3==0.6.0
+pysqlite3-binary==0.5.4.post2
+
 # Deployement
 gunicorn==25.3.0
 whitenoise==6.12.0
