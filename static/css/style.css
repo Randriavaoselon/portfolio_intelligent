@@ -106,27 +106,71 @@ body {
 /* --- Responsive --- */
 
 @media screen and (max-width: 768px) {
-    .main-title {
-        font-size: 1.8rem !important; 
-        line-height: 1.2;
-        letter-spacing: 1px;
-        margin-top: 20px;
+    
+    .hero-section {
+        padding: 40px 0 0 0;
+        text-align: center;   
     }
 
-    .highlight-letter {
-        font-size: 2.2rem !important;
-        color: #f0c37a; 
+    .hero-section .row {
+        flex-direction: column;
+        align-items: center;    
+        gap: 20px;
+    }
+
+    /* Gestion de l'image */
+    .hero-section .col-image {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 320px;       
+        margin: 0 auto;
+        order: 1;              
+    }
+
+    .responsive-image {
+        transform: scale(1.05); 
+        margin: 0 auto;
+        width: 90%;            
+    }
+
+    /* Gestion du texte */
+    .hero-section .col-text {
+        width: 100%;
+        padding-bottom: 40px;   
+        order: 2;               
+    }
+
+    .hero-section .sup-title {
+        font-size: 13px;        
+        margin-bottom: 5px;
+    }
+
+    .hero-section .main-title {
+        font-size: 2rem;       
+        line-height: 1.1;
+        margin-top: 5px;
+    }
+
+    .hero-section .highlight-letter {
+        font-size: 2.4rem;   
+    }
+
+    .hero-section::after {
+        width: 10px; 
     }
 }
 
-/* --- Pour les très petits écrans (iPhone SE, etc.) --- */
 @media screen and (max-width: 380px) {
-    .main-title {
-        font-size: 1.5rem !important;
+    .hero-section .col-image {
+        max-width: 260px;  
+    }
+
+    .hero-section .main-title {
+        font-size: 1.6rem;
     }
     
-    .highlight-letter {
-        font-size: 1.9rem !important;
+    .hero-section .highlight-letter {
+        font-size: 1.9rem;
     }
 }
 
@@ -204,6 +248,10 @@ body {
 .btn-more:hover {
     background: #f0c37a !important;
     color: #075a65 !important;
+}
+
+.btn-hiden-desktop {
+    display: none;
 }
 
 .modal {
@@ -289,20 +337,44 @@ body {
     transition: all 0.2s ease;
 }
 
-/* ---  Mobile --- */
-@media (max-width: 768px) {
-    .skills-wrapper {
-        justify-content: center;
-    }
+/* ---  Mobile Responsive --- */
 
+@media (max-width: 768px) {
+   
     .skill-title {
-        font-size: 1.8rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;          
+        width: 100%;
+        font-size: 1.5rem;           
         margin-bottom: 30px;
     }
 
-    .skill-item {
-        flex: 0 1 calc(45% - 10px);
-        height: 100px;
+    .skill-title .btn-more {
+        display: flex;       
+        flex: 0 0 auto;      
+        height: 32px;        
+        padding: 0 12px;
+        background: rgba(240, 195, 122, 0.15);
+        border: 1px solid #f0c37a;
+        border-radius: 20px;
+        color: #f0c37a;
+        font-size: 0.75rem;
+        font-weight: 600;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+        text-transform: none; 
+    }
+
+    .skills-wrapper .btn-more {
+        display: none !important;
+    }
+
+    .skills-wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
     }
 }
 
@@ -455,6 +527,11 @@ body {
 
     .col-content {
         padding-bottom: 40px;
+    }
+
+    .image-frame {
+        margin: 0 auto;       
+        display: block;     
     }
 }
 
@@ -663,8 +740,10 @@ body {
 .project-card-link {
     text-decoration: none;
     color: inherit;
-    display: block;
+    display: flex;
     flex: 0 0 calc(33.333% - 20px); 
+    flex: 0 0 calc(25% - 15px); 
+    margin-bottom: 20px;
 }
 
 .project-card-link:hover .project-card {
