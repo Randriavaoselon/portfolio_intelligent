@@ -6,8 +6,4 @@ pysqlite3-binary==0.5.4.post2
 
 # Deployement
 gunicorn==25.3.0
-<<<<<<< HEAD
 whitenoise==6.12.0
-=======
-whitenoise==6.12.0
->>>>>>> bba25fa (add new project 16/05/26)
