@@ -732,17 +732,16 @@ body {
 
 .realisations-row {
     display: flex;
-    justify-content: space-between; 
-    gap: 20px; 
     flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
 }
 
 .project-card-link {
     text-decoration: none;
     color: inherit;
     display: flex;
-    flex: 0 0 calc(33.333% - 20px); 
-    flex: 0 0 calc(25% - 15px); 
+    flex: 0 0 calc(25% - 20px);
     margin-bottom: 20px;
 }
 
