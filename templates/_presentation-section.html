@@ -1,0 +1,31 @@
+{% load static %}
+<section id="presentation" class="presentation-section">
+    <div class="container">
+        <div class="row presentation-row">
+
+            <div class="col-video">
+                <div class="video-wrapper" style="position: relative;">
+                    <video id="myVideo" autoplay muted loop playsinline class="presentation-video">
+                        <source src="{% static 'videos/introduction.mp4' %}" type="video/mp4">
+                    </video>
+
+                    <button onclick="toggleMute()" id="muteBtn" class="mute-control">
+                        <i class="fas fa-volume-mute"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="col-text-presentation">
+                <span class="mini-subtitle">Innovation & Technologie</span>
+                <h3 class="presentation-title">C’est en <span class="presentation-title-color">forgeant</span>
+                    qu’on <span class="presentation-title-color">devient</span> forgeron</h3><br>
+                <p class="presentation-description">
+                    À travers mes projets, je m'efforce de repousser les limites du possible en intégrant
+                    des architectures backend robustes avec les dernières avancées en intelligence artificielle.
+                    Chaque ligne de code est pensée pour offrir une expérience utilisateur fluide et impactante.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>

@@ -1,0 +1,180 @@
+{% load static %}
+<section id="realisation" class="realisations-section">
+    <div class="container">
+        <div class="realisations-header">
+            <h1 class="realisations-title">
+                Mes <span class="realisations-title-color">Réalisations</span>
+            </h1>
+
+            <div class="realisations-tabs" role="tablist">
+                <div class="realisations-indicator" id="realisationsIndicator"></div>
+                <button class="realisations-tab is-active" data-cat="frontend" role="tab" aria-selected="true">
+                    <i class="fas fa-pen-ruler"></i><span>Design Frontend</span>
+                </button>
+                <button class="realisations-tab" data-cat="backend" role="tab" aria-selected="false">
+                    <i class="fas fa-server"></i><span>Application Backend</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="realisations-viewport">
+
+            <!-- ===== DESIGN FRONTEND ===== -->
+            <div class="realisations-panel is-active" data-panel="frontend">
+                <div class="realisations-track-wrap">
+                    <div class="realisations-track" data-track="frontend">
+
+                        <a href="https://avenir-client.vercel.app/" target="_blank" class="realisations-card">
+                            <div class="realisations-card-image">
+                                <span class="realisations-card-tag">UI/UX</span>
+                                <img src="{% static 'images/desing-professionnel.png' %}" alt="desing-professionnel">
+                            </div>
+                            <div class="realisations-card-body">
+                                <p class="realisations-card-title">Conception d’un design responsive professionnel</p>
+                                <span class="realisations-card-link">Voir le projet <i
+                                        class="fas fa-external-link-alt"></i></span>
+                            </div>
+                        </a>
+
+                        <a href="https://avenir-tech.netlify.app/" target="_blank" class="realisations-card">
+                            <div class="realisations-card-image">
+                                <span class="realisations-card-tag">UI/UX</span>
+                                <img src="{% static 'images/kotikota-desing.png' %}" alt="Koti Kota">
+                            </div>
+                            <div class="realisations-card-body">
+                                <p class="realisations-card-title">Proposition d'interface utilisateur pour Koti
+                                    Kota</p>
+                                <span class="realisations-card-link">Voir le projet <i
+                                        class="fas fa-external-link-alt"></i></span>
+                            </div>
+                        </a>
+
+                        <a href="https://pharma-techs.netlify.app/" target="_blank" class="realisations-card">
+                            <div class="realisations-card-image">
+                                <span class="realisations-card-tag">Design Challenge</span>
+                                <img src="{% static 'images/pharma-tech.png' %}" alt="Pharma Techs">
+                            </div>
+                            <div class="realisations-card-body">
+                                <p class="realisations-card-title">Pharma Techs — réalisé dans le cadre d'un
+                                    défi de design</p>
+                                <span class="realisations-card-link">Voir le projet <i
+                                        class="fas fa-external-link-alt"></i></span>
+                            </div>
+                        </a>
+
+                        <a href="https://avenir-tech-guide.netlify.app/" target="_blank"
+                            class="realisations-card">
+                            <div class="realisations-card-image">
+                                <span class="realisations-card-tag">Site vitrine</span>
+                                <img src="{% static 'images/guide.png' %}" alt="Guide">
+                            </div>
+                            <div class="realisations-card-body">
+                                <p class="realisations-card-title">Site de conseils pour une vie meilleure</p>
+                                <span class="realisations-card-link">Voir le projet <i
+                                        class="fas fa-external-link-alt"></i></span>
+                            </div>
+                        </a>
+
+                        <a href="https://randriavaoselon.github.io/pageConnexion/" target="_blank"
+                            class="realisations-card">
+                            <div class="realisations-card-image">
+                                <span class="realisations-card-tag">Portail captif</span>
+                                <img src="{% static 'images/WIFI-ZONE.png' %}" alt="WIFI Zone">
+                            </div>
+                            <div class="realisations-card-body">
+                                <p class="realisations-card-title">Conception de la page de connexion MikroTik
+                                </p>
+                                <span class="realisations-card-link">Voir le projet <i
+                                        class="fas fa-external-link-alt"></i></span>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+                <div class="realisations-controls">
+                    <button class="realisations-nav-btn" data-dir="-1" data-for="frontend"
+                        aria-label="Précédent"><i class="fas fa-chevron-left"></i></button>
+                    <span class="realisations-counter" data-counter="frontend"><b>1</b>/4</span>
+                    <button class="realisations-nav-btn" data-dir="1" data-for="frontend"
+                        aria-label="Suivant"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+
+            <!-- ===== APPLICATION BACKEND ===== -->
+            <div class="realisations-panel" data-panel="backend">
+                <div class="realisations-track-wrap">
+                    <div class="realisations-track" data-track="backend">
+
+                        <a href="https://avenir-tech-data.onrender.com/" target="_blank"
+                            class="realisations-card">
+                            <div class="realisations-card-image">
+                                <span class="realisations-card-tag">Data App</span>
+                                <img src="{% static 'images/extract_data.png' %}" alt="Extraction Excel/CSV">
+                            </div>
+                            <div class="realisations-card-body">
+                                <p class="realisations-card-title">Application d'extraction de fichiers Excel et
+                                    CSV</p>
+                                <span class="realisations-card-link">Voir le projet <i
+                                        class="fas fa-external-link-alt"></i></span>
+                            </div>
+                        </a>
+
+                        <a href="https://drive.google.com/file/d/1cFgg3WXKSVUMgdaJFG5i0v-g24y6cZKK/view?usp=drive_link"
+                            target="_blank" class="realisations-card">
+                            <div class="realisations-card-image">
+                                <span class="realisations-card-tag">Temps réel</span>
+                                <img src="{% static 'images/collab-distance.png' %}"
+                                    alt="Collaboration à distance">
+                            </div>
+                            <div class="realisations-card-body">
+                                <p class="realisations-card-title">Application de collaboration à distance en
+                                    temps réel</p>
+                                <span class="realisations-card-link">Voir le projet <i
+                                        class="fas fa-external-link-alt"></i></span>
+                            </div>
+                        </a>
+
+                        <a href="https://drive.google.com/file/d/1cRUVbz20nJX-W4IxpnX8Wn_Txz8Vnny3/view?usp=drive_link"
+                            target="_blank" class="realisations-card">
+                            <div class="realisations-card-image">
+                                <span class="realisations-card-tag">Monitoring</span>
+                                <img src="{% static 'images/app-surveillance.png' %}"
+                                    alt="Surveillance d'équipes">
+                            </div>
+                            <div class="realisations-card-body">
+                                <p class="realisations-card-title">Outil de monitoring des équipes à distance
+                                </p>
+                                <span class="realisations-card-link">Voir le projet <i
+                                        class="fas fa-external-link-alt"></i></span>
+                            </div>
+                        </a>
+
+                        <a href="https://drive.google.com/file/d/1FltaklXiS2KTPLce9wiptm7JiPQlZA_M/view?usp=drive_link"
+                            target="_blank" class="realisations-card">
+                            <div class="realisations-card-image">
+                                <span class="realisations-card-tag">Réservation</span>
+                                <img src="{% static 'images/location-voiture.png' %}"
+                                    alt="Location de voitures">
+                            </div>
+                            <div class="realisations-card-body">
+                                <p class="realisations-card-title">Solution de réservation de voitures en ligne
+                                </p>
+                                <span class="realisations-card-link">Voir le projet <i
+                                        class="fas fa-external-link-alt"></i></span>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+                <div class="realisations-controls">
+                    <button class="realisations-nav-btn" data-dir="-1" data-for="backend"
+                        aria-label="Précédent"><i class="fas fa-chevron-left"></i></button>
+                    <span class="realisations-counter" data-counter="backend"><b>1</b>/4</span>
+                    <button class="realisations-nav-btn" data-dir="1" data-for="backend" aria-label="Suivant"><i
+                            class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
